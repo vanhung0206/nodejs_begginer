@@ -1,0 +1,30 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start":"nodemon --inspect index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vanhung0206/nodejs_begginer.git"
+  },
+  "keywords": [
+    "learn",
+    "nodejs"
+  ],
+  "author": "vanhung0206",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vanhung0206/nodejs_begginer/issues"
+  },
+  "homepage": "https://github.com/vanhung0206/nodejs_begginer#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
