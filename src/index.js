@@ -8,9 +8,10 @@ const handlebars = require('express-handlebars')
 app.use(morgan('combined'))
 
 //Template engine
-app.engine('handlebars', handlebars());
-app.set('view engine', 'handlebars');
 app.set('views', path.join(__dirname, 'resources/views'));
+app.engine('hbs', handlebars({extname: '.hbs'}));
+app.set('view engine', 'hbs');
+
 const port = 3000
 
 
