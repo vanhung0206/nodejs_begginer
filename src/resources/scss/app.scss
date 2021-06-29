@@ -1,0 +1,19 @@
+@import "./variables.scss";
+:root {
+    --hight-header: 56px;
+}
+
+.test {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: $red-color;
+}
+
+.carousel-item img {
+    height: calc(100vh - var(--hight-header));
+    object-fit: cover;
+}
