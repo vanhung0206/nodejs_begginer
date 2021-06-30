@@ -3,6 +3,7 @@ const app = express()
 const path = require('path')
 const morgan = require('morgan')
 const handlebars = require('express-handlebars')
+const router = require('./routes')
 
 //http logger
 app.use(morgan('combined'))
@@ -17,28 +18,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 const port = 3000
 
+//Router Init
+router(app);
 
-app.get('/', (req, res) => {
-  console.log(req.query.keyword);
-  res.render('home');
-})
-
-app.post('/', (req, res) => {
-  res.render('home');
-})
-
-app.get('/new', (req, res) => {
-  res.render('register');
-})
-
-
-app.get('/search', (req, res) => {
-  res.render('search');
-})
-
-app.post('/search', (req, res) => {
-  res.render('search');
-})
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
